@@ -59,6 +59,7 @@ graph TD;
 ## 🖥️ Dashboard y Node-RED
 
 | Nodos de Node-Red | Dashboard |
+|---|---|
 |<img src="https://drive.google.com/uc?export=view&id=1vNUldJlPyMZnleV5JqK4-F8ve4qK_mho" width="500"/>|<img src="https://drive.google.com/uc?export=view&id=1mybJToN9T29-eRmR6oX4Cq77A23HgQN5" width="500"/>|
 
 ---
