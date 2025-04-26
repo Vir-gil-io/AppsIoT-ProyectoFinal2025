@@ -58,7 +58,7 @@ graph TD;
 
 | Montaje y pruebas | Materiales usados | Cableado interno |
 |------------------|-------------------|------------------|
-| ![montaje](./imagenes/montaje1.png) | ![foto2](./imagenes/montaje2.png) | ![foto3](./imagenes/montaje3.png) |
+| https://drive.google.com/file/d/1YMDx8jCyPzG6F7v1iNe2TzXgGcczu9_W/view?usp=sharing | ![foto2](./imagenes/montaje2.png) | ![foto3](./imagenes/montaje3.png) | ![foto2](./imagenes/montaje2.png) | ![foto3](./imagenes/montaje3.png) |
 
 ---
 
