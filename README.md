@@ -39,12 +39,12 @@ graph TD;
 | Componente           | Especificaciones Técnicas                    | Ubicación en el Sistema            |
 |----------------------|----------------------------------------------|------------------------------------|
 | ESP32                | WiFi 802.11 b/g/n, Bluetooth 4.2             | Unidad central de control          |
-| Sensor de Sonido     | Voltaje: 3.3V, Salida Analógica              | Poste de iluminación               |
-| Sensor de Obstáculo  | Infrarrojo digital, rango 2-30 cm            | Base del poste                     |
-| Sensor de Gas        | MQ-135, Salida digital                       | Caja de control                    |
-| Buzzer               | 5V, 2-4kHz                                   | Zona de alerta auditiva            |
+| Micrófono Sensible   | Voltaje: 3.3V, Salida Analógica              | Cerca de una ventana               |
+| Sensor de Obstáculo  | Infrarrojo digital, rango 2-30 cm            | Junto a la puerta                  |
+| Sensor de Gas        | MQ-135, Salida digital                       | Techo de la caseta                 |
+| Buzzer               | 5V, 2-4kHz                                   | Parte de arriba de la caset        |
 | Tira LED RGB         | WS2812B, 10 LEDs                             | Iluminación principal              |
-| Pantalla OLED        | SSD1306, I2C 128x64                          | Visualización local de estado      |
+| Pantalla OLED        | SSD1306, I2C 128x64                          | Visualicación de alerta            |
 
 ---
 
