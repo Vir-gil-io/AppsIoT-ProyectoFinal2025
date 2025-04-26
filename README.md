@@ -75,7 +75,7 @@ graph TD;
 
 🎮 **Video de validación del sistema:**  
 
-[![Video Validación](https://img.shields.io/badge/YouTube-Ver%20Video-red?logo=youtube)](https://youtu.be/F0IYwWB71fs?si=4-UIC3-dEtw0dK1x)
+<a href="https://drive.google.com/file/d/1HtmbRq3sqZ412pA8bL9V3XrinhruwEJE/view?usp=sharing">Validación y Retroalimentación del proyecto</a>
 
 ---
 
