@@ -25,7 +25,6 @@ graph TD;
     ir[Sensor de Obstáculo] --> ESP32
     gas[Sensor de Gas MQ-135] --> ESP32
     dist[Sensor Ultrasónico HC-SR04] --> ESP32
-    temp[Sensor de Temperatura y Humedad DHT11] --> ESP32
     end
 
     ESP32 -->|WiFi + MQTT| RaspberryPi
