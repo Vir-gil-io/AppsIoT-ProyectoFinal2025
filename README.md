@@ -1,19 +1,18 @@
-# AppsIoT-ProyectoFinal2025
-# 🚨 Sistema Anti-Inundaciones de Sótanos
+# 💡 Sistema de Iluminación Pública Inteligente
 
-**Autores:** Gerardo Manzano y equipo  
+**Autores:** Josué Alejandro Esparza Padilla y Gilberto Fabián Correa González  
 _Proyecto final de la materia Aplicaciones de IoT_
 
 ---
 
 ## 🌟 Características Clave
 
-- 📡 **Detección en tiempo real** de gas, sonido y obstáculos.
+- 📡 **Detección en tiempo real** de sonido, obstáculos y presencia de gases.
 - 🌦️ **Monitoreo ambiental** con sensores analógicos y digitales.
-- 📊 **Visualización en Node-RED Dashboard** con gráficas y alertas.
-- 📧 **Sistema de alertas MQTT** y buzzer físico.
+- 📊 **Visualización en Node-RED Dashboard** con gráficas, tablas y alertas.
+- 📧 **Sistema de alertas MQTT** con buzzer, LED RGB y control OLED.
 - 🗃️ **Registro histórico** en base de datos PostgreSQL.
-- 💙 **Control remoto** del buzzer desde botón en Node-RED.
+- 💙 **Control remoto del buzzer** desde el panel en Node-RED.
 
 ---
 
@@ -26,7 +25,8 @@ graph TD;
     ESP32 --> Actuadores
     RaspberryPi --> Dashboard[Node-RED Dashboard]
     Actuadores --> Buzzer
-    Actuadores --> LED
+    Actuadores --> LED[Tira LED RGB]
+    Actuadores --> OLED[Display OLED I2C]
     RaspberryPi --> PostgreSQL[(Base de Datos)]
 ```
 
@@ -39,11 +39,12 @@ graph TD;
 | Componente           | Especificaciones Técnicas                    | Ubicación en el Sistema            |
 |----------------------|----------------------------------------------|------------------------------------|
 | ESP32                | WiFi 802.11 b/g/n, Bluetooth 4.2             | Unidad central de control          |
-| Sensor de Sonido     | Voltaje: 3.3V, Salida Analógica              | Pared del sótano                   |
-| Sensor de Obstáculo  | Infrarrojo digital, rango 2-30 cm            | Entrada del sótano                 |
-| Sensor de Gas        | MQ-135, Salida digital                       | Área crítica de ventilación        |
+| Sensor de Sonido     | Voltaje: 3.3V, Salida Analógica              | Poste de iluminación               |
+| Sensor de Obstáculo  | Infrarrojo digital, rango 2-30 cm            | Base del poste                     |
+| Sensor de Gas        | MQ-135, Salida digital                       | Caja de control                    |
 | Buzzer               | 5V, 2-4kHz                                   | Zona de alerta auditiva            |
-| LED RGB              | WS2812B, 10 LEDs                             | Zona de alerta visual              |
+| Tira LED RGB         | WS2812B, 10 LEDs                             | Iluminación principal              |
+| Pantalla OLED        | SSD1306, I2C 128x64                          | Visualización local de estado      |
 
 ---
 
@@ -74,4 +75,5 @@ graph TD;
 [![Resultados](https://img.shields.io/badge/YouTube-Resultados%20Obtenidos-blue?logo=youtube)](https://youtu.be/sRgUl2rID08?si=QA6XuITk5DwffLi7)
 
 ---
+
 
