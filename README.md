@@ -60,7 +60,7 @@ graph TD;
 
 | Nodos de Node-Red | Dashboard |
 |---|---|
-|<img src="https://drive.google.com/uc?export=view&id=1vNUldJlPyMZnleV5JqK4-F8ve4qK_mho" width="700"/>|<img src="https://drive.google.com/uc?export=view&id=1mybJToN9T29-eRmR6oX4Cq77A23HgQN5" width="700"/><img src="https://drive.google.com/uc?export=view&id=1sAAg9sOGAbtJZCi5s9RmMx_dXv4COUhG" width="700"/>|
+|<img src="https://drive.google.com/uc?export=view&id=1vNUldJlPyMZnleV5JqK4-F8ve4qK_mho" width="900"/>|<img src="https://drive.google.com/uc?export=view&id=1mybJToN9T29-eRmR6oX4Cq77A23HgQN5" width="700"/><img src="https://drive.google.com/uc?export=view&id=1sAAg9sOGAbtJZCi5s9RmMx_dXv4COUhG" width="700"/>|
 
 ---
 
