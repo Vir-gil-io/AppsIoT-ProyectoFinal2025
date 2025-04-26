@@ -79,7 +79,7 @@ graph TD;
 ## 🏆 Resultados Obtenidos
 
 📹 **Resultados en funcionamiento:**  
-[![Resultados](https://img.shields.io/badge/YouTube-Resultados%20Obtenidos-blue?logo=youtube)](https://youtu.be/sRgUl2rID08?si=QA6XuITk5DwffLi7)
+[![Resultados](https://youtu.be/vdBM9zzcJOw)
 
 ---
 
