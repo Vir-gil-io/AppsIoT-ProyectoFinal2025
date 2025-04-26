@@ -20,14 +20,23 @@ _Proyecto final de la materia Aplicaciones de IoT_
 
 ```mermaid
 graph TD;
-    Sensores --> ESP32
-    ESP32 --> RaspberryPi
+    subgraph Entrada
+    mic[Sensor de Sonido] --> ESP32
+    ir[Sensor de Obstáculo] --> ESP32
+    gas[Sensor de Gas MQ-135] --> ESP32
+    dist[Sensor Ultrasónico HC-SR04] --> ESP32
+    temp[Sensor de Temperatura y Humedad DHT11] --> ESP32
+    end
+
+    ESP32 -->|WiFi + MQTT| RaspberryPi
     ESP32 --> Actuadores
+
     RaspberryPi --> Dashboard[Node-RED Dashboard]
+    RaspberryPi --> PostgreSQL[(Base de Datos)]
+
     Actuadores --> Buzzer
     Actuadores --> LED[Tira LED RGB]
     Actuadores --> OLED[Display OLED I2C]
-    RaspberryPi --> PostgreSQL[(Base de Datos)]
 ```
 
 ---
