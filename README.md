@@ -56,9 +56,10 @@ graph TD;
 
 ---
 
-## 🖥️ Dashboard en Node-RED
+## 🖥️ Dashboard y Node-RED
 
-![Dashboard](./imagenes/dashboard.png)
+| Nodos de Node-Red | Dashboard |
+|<img src="https://drive.google.com/uc?export=view&id=1vNUldJlPyMZnleV5JqK4-F8ve4qK_mho" width="500"/>|<img src="https://drive.google.com/uc?export=view&id=1mybJToN9T29-eRmR6oX4Cq77A23HgQN5" width="500"/>|
 
 ---
 
@@ -72,6 +73,7 @@ graph TD;
 ## 🔎 Validación del Proyecto
 
 🎮 **Video de validación del sistema:**  
+
 [![Video Validación](https://img.shields.io/badge/YouTube-Ver%20Video-red?logo=youtube)](https://youtu.be/F0IYwWB71fs?si=4-UIC3-dEtw0dK1x)
 
 ---
