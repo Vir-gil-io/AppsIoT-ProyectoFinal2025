@@ -79,7 +79,7 @@ graph TD;
 ## 🏆 Resultados Obtenidos
 
 📹 **Resultados en funcionamiento:**  
-[![Resultados](https://youtu.be/vdBM9zzcJOw)
+https://youtu.be/vdBM9zzcJOw
 
 ---
 
