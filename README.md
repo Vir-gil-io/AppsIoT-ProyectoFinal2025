@@ -58,8 +58,7 @@ graph TD;
 
 | Montaje y pruebas | Materiales usados | Cableado interno |
 |------------------|-------------------|------------------|
-| <img src="https://drive.google.com/uc?export=view&id=1YMDx8jCyPzG6F7v1iNe2TzXgGcczu9_W" width="300"/> | https://drive.google.com/file/d/1sHjKcKTSXX22XKSqmGwYFCTMGYzElB93/view?usp=sharing | https://drive.google.com/file/d/1FYR72bXAjQUmYC6KbE7qlxV5l1ecEUsT/view?usp=sharing | https://drive.google.com/file/d/1ZY5g-Fs7_Pl2my0fGD6A7laokcmQwGKm/view?usp=sharing | https://drive.google.com/file/d/1bIFmD7yhvmL8oTpBbJq-rjp9mR2bjAwK/view?usp=sharing |
-<img src="https://drive.google.com/uc?export=view&id=109SOHW3oqziotbuNRsDZ9mE1Ku3VWO8V" width="700"/>
+| <img src="https://drive.google.com/uc?export=view&id=1YMDx8jCyPzG6F7v1iNe2TzXgGcczu9_W" width="500"/> | <img src="https://drive.google.com/uc?export=view&id=1sHjKcKTSXX22XKSqmGwYFCTMGYzElB93" width="500"/>  | <img src="https://drive.google.com/uc?export=view&id=1YMDx8jCyPzG6F7v1iNe2TzXgGcczu9_W" width="500"/> | <img src="https://drive.google.com/uc?export=view&id=1ZY5g-Fs7_Pl2my0fGD6A7laokcmQwGKm" width="500"/> | <img src="https://drive.google.com/uc?export=view&id=1bIFmD7yhvmL8oTpBbJq-rjp9mR2bjAwK" width="500"/> |
 ---
 
 ## 🔎 Validación del Proyecto
