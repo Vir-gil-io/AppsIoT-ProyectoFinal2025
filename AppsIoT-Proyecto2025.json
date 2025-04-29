@@ -1,0 +1,910 @@
+[
+    {
+        "id": "83db909d955e8148",
+        "type": "ui_switch",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "label": "Encender/Apagar luz tarsera",
+        "tooltip": "",
+        "group": "34575718588d1dcb",
+        "order": 2,
+        "width": 14,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "caseta/luz/set",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 460,
+        "y": 180,
+        "wires": [
+            [
+                "876430e7c4c0d9ae"
+            ]
+        ]
+    },
+    {
+        "id": "876430e7c4c0d9ae",
+        "type": "mqtt out",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "caseta/luz/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "713aa9f5780c4c93",
+        "x": 740,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "49d01ec990f8c6b5",
+        "type": "ui_text_input",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "label": "Comunicar mensaje (sin acentos):",
+        "tooltip": "",
+        "group": "34575718588d1dcb",
+        "order": 5,
+        "width": 14,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "c1d130686a25e367"
+            ]
+        ]
+    },
+    {
+        "id": "c1d130686a25e367",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "setTexto",
+        "func": "flow.set(\"texto\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "64d04b526c60278c",
+        "type": "ui_button",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "group": "34575718588d1dcb",
+        "order": 8,
+        "width": 8,
+        "height": 1,
+        "passthru": false,
+        "label": "Enviar mensaje",
+        "tooltip": "",
+        "color": "#F00",
+        "bgcolor": "#FF0",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "4a5ccb7fe724c3b5"
+            ]
+        ]
+    },
+    {
+        "id": "4a5ccb7fe724c3b5",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "getTexto",
+        "func": "msg.payload = flow.get(\"texto\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "8c1c5d0b3d46bb79"
+            ]
+        ]
+    },
+    {
+        "id": "9498f8e4e07c81d8",
+        "type": "mqtt in",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "caseta/distancia",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "713aa9f5780c4c93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "800b2643cd785fdb"
+            ]
+        ]
+    },
+    {
+        "id": "800b2643cd785fdb",
+        "type": "ui_chart",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "group": "34575718588d1dcb",
+        "order": 11,
+        "width": 12,
+        "height": 7,
+        "label": "Distancia (cm)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c1c5d0b3d46bb79",
+        "type": "mqtt out",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "caseta/luz/msg",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "713aa9f5780c4c93",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "8b756554637384e9",
+        "type": "mqtt in",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "caseta/luz/state",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "713aa9f5780c4c93",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 180,
+        "wires": [
+            [
+                "83db909d955e8148"
+            ]
+        ]
+    },
+    {
+        "id": "72fb27f83c973a6e",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "fdd016074968f708"
+            ]
+        ]
+    },
+    {
+        "id": "fdd016074968f708",
+        "type": "debug",
+        "z": "35f79b4b39c5a0f3",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c2a195413fabae4e",
+        "type": "mqtt in",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "sensor/sonido",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2ccb4ab1dd9f2152",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "8367257c6447edc2",
+                "8437fb3f818c4227"
+            ]
+        ]
+    },
+    {
+        "id": "c612966d9b169cef",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 660,
+        "wires": [
+            [
+                "e152e7355bd26d06"
+            ]
+        ]
+    },
+    {
+        "id": "e152e7355bd26d06",
+        "type": "debug",
+        "z": "35f79b4b39c5a0f3",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "c496118ec3ba08c9",
+        "type": "mqtt in",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "sensor/obstaculo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2ccb4ab1dd9f2152",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 660,
+        "wires": [
+            [
+                "8b26efc79ded2935"
+            ]
+        ]
+    },
+    {
+        "id": "62b31b5d16d06b80",
+        "type": "debug",
+        "z": "35f79b4b39c5a0f3",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "7f2cd64b3a0e619b",
+        "type": "mqtt in",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "topic": "sensor/humo",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2ccb4ab1dd9f2152",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 840,
+        "wires": [
+            [
+                "3d9f941f2ae6b932"
+            ]
+        ]
+    },
+    {
+        "id": "1626f81a6d86ff66",
+        "type": "ui_table",
+        "z": "35f79b4b39c5a0f3",
+        "group": "fcacfda12cc50ffc",
+        "name": "",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 750,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "d6bdd09fa79d9dca",
+        "type": "inject",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "c315d2a3407d5516"
+            ]
+        ]
+    },
+    {
+        "id": "c315d2a3407d5516",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "SELECT sd.id_detalle, s.nombre_sensor, sd.detalle\nFROM sensor_detalle sd\nJOIN sensor s ON sd.id_sensor = s.id_sensor\nWHERE sd.id_sensor = 2;\n",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 560,
+        "wires": [
+            [
+                "1626f81a6d86ff66"
+            ]
+        ]
+    },
+    {
+        "id": "619136b0aa036d83",
+        "type": "ui_table",
+        "z": "35f79b4b39c5a0f3",
+        "group": "3ea2191b208e44e8",
+        "name": "",
+        "order": 1,
+        "width": 8,
+        "height": 8,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 730,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "e0cca3faf71f1020",
+        "type": "inject",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 720,
+        "wires": [
+            [
+                "d412b72e5507bc24"
+            ]
+        ]
+    },
+    {
+        "id": "d412b72e5507bc24",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "SELECT sd.id_detalle, s.nombre_sensor, sd.detalle\nFROM sensor_detalle sd\nJOIN sensor s ON sd.id_sensor = s.id_sensor\nWHERE sd.id_sensor = 3;\n",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 720,
+        "wires": [
+            [
+                "619136b0aa036d83"
+            ]
+        ]
+    },
+    {
+        "id": "87c7a5f8f431e3bd",
+        "type": "inject",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 900,
+        "wires": [
+            [
+                "f2d4f3af700d6c14"
+            ]
+        ]
+    },
+    {
+        "id": "f2d4f3af700d6c14",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "SELECT sd.id_detalle, s.nombre_sensor, sd.detalle\nFROM sensor_detalle sd\nJOIN sensor s ON sd.id_sensor = s.id_sensor\nWHERE sd.id_sensor = 1;\n",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 900,
+        "wires": [
+            [
+                "cc1b4eecf56d8ec5"
+            ]
+        ]
+    },
+    {
+        "id": "cc1b4eecf56d8ec5",
+        "type": "ui_table",
+        "z": "35f79b4b39c5a0f3",
+        "group": "5c28859b65de907e",
+        "name": "",
+        "order": 1,
+        "width": 7,
+        "height": 8,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 740,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "8367257c6447edc2",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "function 2",
+        "func": "msg.query = `INSERT INTO sensor_detalle(id_sensor, detalle) VALUES (2, '${JSON.stringify(msg.payload)}');`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 500,
+        "wires": [
+            [
+                "72fb27f83c973a6e"
+            ]
+        ]
+    },
+    {
+        "id": "8b26efc79ded2935",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "function 3",
+        "func": "msg.query = `INSERT INTO sensor_detalle(id_sensor, detalle) VALUES (3, '${JSON.stringify(msg.payload)}');`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 660,
+        "wires": [
+            [
+                "c612966d9b169cef"
+            ]
+        ]
+    },
+    {
+        "id": "3d9f941f2ae6b932",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "function 4",
+        "func": "msg.query = `INSERT INTO sensor_detalle(id_sensor, detalle) VALUES (1, '${JSON.stringify(msg.payload)}');`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 840,
+        "wires": [
+            [
+                "fa774d8e0e25e935"
+            ]
+        ]
+    },
+    {
+        "id": "fa774d8e0e25e935",
+        "type": "postgresql",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "query": "",
+        "postgreSQLConfig": "ba354b8b24ef27d7",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 570,
+        "y": 840,
+        "wires": [
+            [
+                "62b31b5d16d06b80"
+            ]
+        ]
+    },
+    {
+        "id": "211d7ad08667dc41",
+        "type": "ui_gauge",
+        "z": "35f79b4b39c5a0f3",
+        "name": "",
+        "group": "fcacfda12cc50ffc",
+        "order": 2,
+        "width": 8,
+        "height": 3,
+        "gtype": "gage",
+        "title": "Gráfica de Sonido",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 610,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0942f4897558b318",
+        "type": "ui_button",
+        "z": "35f79b4b39c5a0f3",
+        "name": "Mutear Buzzer",
+        "group": "d83c5d5f7265e700",
+        "order": 1,
+        "width": 8,
+        "height": 8,
+        "passthru": false,
+        "label": "🔕 Silenciar Buzzer",
+        "tooltip": "Pulsa para silenciar buzzer",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "sensor/mute",
+        "topicType": "str",
+        "x": 330,
+        "y": 1000,
+        "wires": [
+            [
+                "116d661bcf95974f"
+            ]
+        ]
+    },
+    {
+        "id": "116d661bcf95974f",
+        "type": "mqtt out",
+        "z": "35f79b4b39c5a0f3",
+        "name": "Publicar mute buzzer",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2ccb4ab1dd9f2152",
+        "x": 600,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "8437fb3f818c4227",
+        "type": "function",
+        "z": "35f79b4b39c5a0f3",
+        "name": "sacarSonido",
+        "func": "msg.payload = msg.payload.sonido;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "211d7ad08667dc41"
+            ]
+        ]
+    },
+    {
+        "id": "34575718588d1dcb",
+        "type": "ui_group",
+        "name": "Control de Mensajes/Iluminación posterior",
+        "tab": "160d828bd4564044",
+        "order": 5,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "713aa9f5780c4c93",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ba354b8b24ef27d7",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "aiot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "user": "utng",
+        "userFieldType": "str",
+        "password": "1234",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "2ccb4ab1dd9f2152",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.137.228",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fcacfda12cc50ffc",
+        "type": "ui_group",
+        "name": "Sonido",
+        "tab": "160d828bd4564044",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3ea2191b208e44e8",
+        "type": "ui_group",
+        "name": "Obstaculo",
+        "tab": "160d828bd4564044",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c28859b65de907e",
+        "type": "ui_group",
+        "name": "Humo",
+        "tab": "160d828bd4564044",
+        "order": 4,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d83c5d5f7265e700",
+        "type": "ui_group",
+        "name": "Buzzer",
+        "tab": "160d828bd4564044",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "160d828bd4564044",
+        "type": "ui_tab",
+        "name": "Proyecto2025",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    }
+]
