@@ -16,29 +16,8 @@ _Proyecto final de la materia Aplicaciones de IoT_
 
 ---
 
-## 🧱 Arquitectura del Sistema
-
-```mermaid
-graph TD;
-    subgraph Entrada
-    mic[Sensor de Sonido] --> ESP32
-    ir[Sensor de Obstáculo] --> ESP32
-    gas[Sensor de Gas MQ-135] --> ESP32
-    dist[Sensor Ultrasónico HC-SR04] --> ESP32
-    end
-
-    ESP32 -->|WiFi + MQTT| RaspberryPi
-    ESP32 --> Actuadores
-
-    RaspberryPi --> Dashboard[Node-RED Dashboard]
-    RaspberryPi --> PostgreSQL[(Base de Datos)]
-
-    Actuadores --> Buzzer
-    Actuadores --> LED[Tira LED RGB]
-    Actuadores --> OLED[Display OLED I2C]
-```
-
----
+## 🧱 Diagrama de conexión
+<img src="https://drive.google.com/uc?export=view&id=1Fg6Um61u1S10magj7s0GFyuGrWaeWpNk" width="700"/>
 
 ## 🔧 Especificaciones Técnicas Detalladas
 
