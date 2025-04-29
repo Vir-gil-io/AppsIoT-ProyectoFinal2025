@@ -17,7 +17,8 @@ _Proyecto final de la materia Aplicaciones de IoT_
 ---
 
 ## 🧱 Diagrama de conexión
-<img src="https://drive.google.com/uc?export=view&id=1Fg6Um61u1S10magj7s0GFyuGrWaeWpNk" width="700"/>
+<img src="https://drive.google.com/uc?export=view&id=1yCYIG4gFnIKL3Uz8Uw9AN-LhRar64wM3" width="700"/>
+
 
 ## 🔧 Especificaciones Técnicas Detalladas
 
